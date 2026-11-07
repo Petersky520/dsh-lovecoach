@@ -70,7 +70,7 @@
       "comment": "Original LoveCoach skill methodology (MIT)"
     }
   ],
-  "homepage": "https://github.com/replyher/lovecoach-skill",
+  "homepage": "https://github.com/Petersky520/dsh-lovecoach#readme",
   "keywords": [
     "dsh",
     "dsh-go",
@@ -82,7 +82,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/REPLACE_ME/dsh-lovecoach.git"
+    "url": "https://github.com/Petersky520/dsh-lovecoach.git"
   },
   "scripts": {
     "test": "node --test \"test/*.test.js\"",
@@ -95,5 +95,14 @@
     "ATTRIBUTION.md",
     "NOTICE",
     "cordis.patch.yml"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/Petersky520/dsh-lovecoach/issues"
+  },
+  "upstream": {
+    "name": "replyher/lovecoach-skill",
+    "url": "https://github.com/replyher/lovecoach-skill",
+    "author": "ReplyHer",
+    "license": "MIT"
+  }
 }
