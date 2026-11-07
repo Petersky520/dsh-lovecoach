@@ -1,0 +1,5 @@
+This plugin reimplements the coaching methodology of
+  https://github.com/replyher/lovecoach-skill
+Copyright (c) 2026 ReplyHer, MIT License (see LICENSE).
+
+Rewritten for DSH as a local, offline rule engine.

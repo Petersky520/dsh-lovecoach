@@ -1,0 +1,99 @@
+{
+  "name": "local-lovecoach",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "description": "LoveCoach for DSH — attachment-aware dating coach. A lovecoach tool, a runtime skill, and dsh-go native panels. Based on replyher/lovecoach-skill (MIT) by ReplyHer.",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "恋爱教练",
+      "en": "LoveCoach"
+    },
+    "icon": "heart",
+    "wants": [
+      "clipboard"
+    ],
+    "contributes": {
+      "composer.actions": [
+        {
+          "id": "coach-clip",
+          "label": {
+            "zh": "教练看剪贴板",
+            "en": "Coach clip"
+          },
+          "icon": "heart"
+        }
+      ],
+      "composer.tools": [
+        {
+          "id": "coach-panel",
+          "label": {
+            "zh": "恋爱教练",
+            "en": "Coach"
+          },
+          "icon": "heart",
+          "panel": "diagnose"
+        }
+      ],
+      "panels": [
+        {
+          "id": "diagnose",
+          "title": {
+            "zh": "恋爱教练",
+            "en": "LoveCoach"
+          },
+          "icon": "heart",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
+  "author": "DSH LoveCoach contributors",
+  "contributors": [
+    {
+      "name": "ReplyHer",
+      "url": "https://github.com/replyher/lovecoach-skill",
+      "comment": "Original LoveCoach skill methodology (MIT)"
+    }
+  ],
+  "homepage": "https://github.com/replyher/lovecoach-skill",
+  "keywords": [
+    "dsh",
+    "dsh-go",
+    "plugin",
+    "lovecoach",
+    "dating",
+    "attachment",
+    "skill"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/REPLACE_ME/dsh-lovecoach.git"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "check": "node \"$DSH_HOME/skills/dsh-go-plugin/kit/bin/check.mjs\" . --load"
+  },
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "ATTRIBUTION.md",
+    "NOTICE",
+    "cordis.patch.yml"
+  ]
+}

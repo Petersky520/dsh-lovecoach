@@ -1,0 +1,6 @@
+# id: any unique id; name: must equal "name" in package.json.
+- insert:
+    - id: local-lovecoach
+      name: local-lovecoach
+      config:
+        tone: direct
