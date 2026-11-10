@@ -37,6 +37,19 @@ test('插件注册了 lovecoach 工具与 lovecoach 技能', async () => {
   assert.ok(skills.some((s) => s.name === 'lovecoach'), 'runtime skill registered')
 })
 
+// 回归：registry.register() 只补 provider，不补 source；缺 source 时技能登记得上、
+// 但一加载就抛「skill source must be a string」，表现为「技能突然用不了了」。
+test('技能定义能通过 registry 的加载期校验（必须有 source）', async () => {
+  const { skills } = await mount()
+  const skill = skills.find((s) => s.name === 'lovecoach')
+  assert.equal(typeof skill.source, 'string', 'source must be a string')
+  assert.ok(skill.source.length > 0)
+  assert.equal(typeof skill.content, 'string')
+  assert.ok(skill.content.length > 100, 'skill body is present')
+  assert.equal(typeof skill.description, 'string')
+  assert.ok(skill.description.length > 0)
+})
+
 test('工具定义符合 registry 契约（output.schema + render）', async () => {
   const { registered } = await mount()
   const tool = registered.find((t) => t.name === 'lovecoach')

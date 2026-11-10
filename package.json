@@ -1,9 +1,9 @@
 {
   "name": "local-lovecoach",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
-  "description": "LoveCoach for DSH — attachment-aware dating coach. A lovecoach tool, a runtime skill, and dsh-go native panels. Based on replyher/lovecoach-skill (MIT) by ReplyHer.",
+  "description": "LoveCoach for DSH — attachment-aware dating coach: a lovecoach tool, a runtime skill, and dsh-go native panels.",
   "license": "MIT",
   "main": "lib/index.js",
   "dsh": {
@@ -61,48 +61,5 @@
         }
       ]
     }
-  },
-  "author": "DSH LoveCoach contributors",
-  "contributors": [
-    {
-      "name": "ReplyHer",
-      "url": "https://github.com/replyher/lovecoach-skill",
-      "comment": "Original LoveCoach skill methodology (MIT)"
-    }
-  ],
-  "homepage": "https://github.com/Petersky520/dsh-lovecoach#readme",
-  "keywords": [
-    "dsh",
-    "dsh-go",
-    "plugin",
-    "lovecoach",
-    "dating",
-    "attachment",
-    "skill"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Petersky520/dsh-lovecoach.git"
-  },
-  "scripts": {
-    "test": "node --test \"test/*.test.js\"",
-    "check": "node \"$DSH_HOME/skills/dsh-go-plugin/kit/bin/check.mjs\" . --load"
-  },
-  "files": [
-    "lib/",
-    "README.md",
-    "LICENSE",
-    "ATTRIBUTION.md",
-    "NOTICE",
-    "cordis.patch.yml"
-  ],
-  "bugs": {
-    "url": "https://github.com/Petersky520/dsh-lovecoach/issues"
-  },
-  "upstream": {
-    "name": "replyher/lovecoach-skill",
-    "url": "https://github.com/replyher/lovecoach-skill",
-    "author": "ReplyHer",
-    "license": "MIT"
   }
 }
